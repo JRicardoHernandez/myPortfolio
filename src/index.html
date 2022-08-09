@@ -8,31 +8,25 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-info">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-div-hide text-rigth w-80 text-white">
-        <h2>Portfolio</h2>
-      </div>
-      <div class="collapse navbar-collapse" id="menu">
-        <a class="navbar-brand text-white" href="#">Portfolio</a>
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-white">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
-    </div>
-  </nav>
+  <!-- <div class="wrapper-load">
+    <div class="loader"></div>
+  </div> -->
+  <div class="wrapper-load text-center">
+    <!-- <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div> -->
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+  </div>
   <app-root></app-root>
 </body>
+<script>
+  const fadeOut = () => {
+    const loaderWrapper = document.querySelector(".wrapper-load");
+    loaderWrapper.classList.add('fade-load');
+  }
+  window.addEventListener("load", fadeOut);
+</script>
 </html>

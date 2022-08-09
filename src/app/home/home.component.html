@@ -1,0 +1,100 @@
+
+<div class="header-wave">
+    <div class="row p-5">
+      <div class="card mx-auto text-dark" style="width: 18rem;">
+        <div class="card-header">
+          <img src="../../assets/yo.jpg" class="card-img-top rounded-4" style="max-width: 200px;" alt="Jose Ricardo">
+        </div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <h5 class="card-title">José Ricardo Hernández Arellano</h5>
+            <footer class="blockquote-footer mt-1"><cite title="Source Title">Ingeniero en Sistemas</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#9eeaf9" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="#6edff6" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="#a6e9d5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#79dfc1" />
+        </g>
+      </svg>
+    </div>
+  </div>
+  
+  <div class="w-100 bd-teal-300 pt-5">
+    <div class="container">
+      <div class="div-overflow-horizontal m-2 p-1">
+        
+        <ng-container *ngFor="let trabajo of trabajosInfo">
+          <div class="card text-center m-3 card-glass" style="width: 18rem;background-color: #fff !important;">
+            <div class="card-body">
+              <h5 class="card-title">{{ trabajo.empresa }}</h5>
+              <h6 class="card-subtitle mt-2 mb-2 text-muted">{{ trabajo.Puesto }}</h6>
+              <blockquote class="blockquote mb-0">
+                <span class="badge text-bg-primary">{{ trabajo.Inicio }}</span> - <span class="badge text-bg-success">{{ trabajo.Fin }}</span>
+              </blockquote>
+              <footer class="blockquote-footer mt-1"><cite title="Source Title">{{ meData.nombre }}</cite></footer>
+            </div>
+            <div class="card-footer">
+              <a [routerLink]="['/trabajo-detalle/', trabajo.id$]" class="btn btn-primary">Ver Más</a>
+            </div>
+          </div>
+        </ng-container>
+            
+      </div>
+    </div>
+    <div class="row">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#a6e9d5" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="#79dfc1" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="#479f76" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#75b798" />
+        </g>
+      </svg>
+    </div>
+      
+  </div>
+  
+  <div class="w-100 bd-green-300 pt-5 pb-5">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4 p-5">
+                <img src="https://portafolio-web-developer.web.app/assets/icon/logo-portafolio.png" style="max-width: 200px;" class="img-fluid rounded mx-auto d-block" alt="Mi Foto">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h2>Acerca de mi</h2>
+                  <p class="card-text">
+                    Mi nombre es José Ricardo Hernández Arellano y soy un programador apasionado. Desde que conoci este mundo aprendi varios lenguajes y sigo aprendiendo más. 
+                    Termine mi carrera en la Universidad Técnologica del Estado de Guanajuato (UTSOE) y desde ese momento me dedique por completo en la elaboración de aplicaciones y sistemas. 
+                    Conozco varios lenguajes de programación, pero los que más me gustan son Angular y Ionic con los cuales es posible realizar tanto una página web como una aplicación móvil. 
+                    Con la misma pasión que aprendí Angular y Ionic aprendí PHP con el framework Codeigniter. Estoy dispuesto completamente a aprender nuevos lenguajes de programación 
+                    y dar mi máximo para que el cliente quede satisfecho. También estoy interesado en aprender nuevas tecnologías y comenzar algo nuevo desde cero al igual que me 
+                    encanta trabajar en equipo y nunca eh tenido ni tengo miedo de retos nuevos y eso me a ayudado a crecer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

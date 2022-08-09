@@ -1,0 +1,37 @@
+
+<div class="header-wave">
+    
+    <div class="div-overflow-horizontal p-2">
+        
+        <ng-container *ngFor="let trabajo of trabajosInfo">
+            <div class="card text-center m-3 card-glass" style="width: 18rem;background-color: #fff !important;">
+                <div class="card-body">
+                <h5 class="card-title">{{ trabajo.empresa }}</h5>
+                <h6 class="card-subtitle mt-2 mb-2 text-muted">{{ trabajo.Puesto }}</h6>
+                <blockquote class="blockquote mb-0">
+                    <span class="badge text-bg-primary">{{ trabajo.Inicio }}</span> - <span class="badge text-bg-success">{{ trabajo.Fin }}</span>
+                </blockquote>
+                </div>
+                <div class="card-footer">
+                <a [routerLink]="['/trabajo-detalle/', trabajo.id$]" class="btn btn-primary">Ver Más</a>
+                </div>
+            </div>
+        </ng-container>
+            
+    </div>
+    
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#9eeaf9" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="#6edff6" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="#a6e9d5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#79dfc1" />
+        </g>
+      </svg>
+    </div>
+</div>

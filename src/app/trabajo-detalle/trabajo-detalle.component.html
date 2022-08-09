@@ -1,0 +1,62 @@
+
+<div class="header-wave">
+    <div class="row p-5">
+      <div class="card mx-auto text-dark" style="width: 18rem; background-color: #ffc0eb !important;">
+        <div class="card-header">
+            <h5 class="card-title">Mi experiencia en:</h5>
+          <img src="https://portafolio-web-developer.web.app/assets/icon/logo-portafolio.png" class="card-img-top" style="max-width: 200px;" alt="JRicardo">
+        </div>
+        <div class="card-body">
+          <button *ngIf="!loadData" class="btn btn-primary" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+          <blockquote *ngIf="loadData" class="blockquote mb-0">
+            <h5 class="card-title">{{ trabajoInfo.empresa }}</h5>
+            <h6 class="card-subtitle mt-2 mb-2 text-muted">{{ trabajoInfo.Puesto }}</h6>
+            <span class="badge text-bg-primary">{{ trabajoInfo.Inicio }}</span> - <span class="badge text-bg-success">{{ trabajoInfo.Fin }}</span>
+            <div class="d-grid gap-2 col-6 mx-auto mt-2 mb-2">
+                <button class="btn btn-sm btn-rounded btn-info" type="button" data-bs-toggle="collapse" data-bs-target="#detalleInfo" aria-expanded="false" aria-controls="detalleInfo">
+                    Más Detalles
+                </button>
+            </div>
+            <div class="collapse pt-3 pb-3" id="detalleInfo" style="height: 300px;overflow-y: auto;">
+                <p class="card-text mt-2 text-start fs-6">
+                    {{ trabajoInfo.Descripcion }}
+                </p>
+              </div>
+              <footer class="blockquote-footer mt-1"><cite title="Source Title">{{ meData.nombre }}</cite></footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <button *ngIf="!loadData" class="btn btn-primary" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+        Loading...
+      </button>
+      <div *ngIf="loadData" class="card mx-auto mt-3 mb-3" style="max-width: 18rem;height: fit-content;">
+        <div class="card-header">
+          <h6 class="card-subtitle mt-2 mb-2">Tecnologias Utilizadas</h6>
+        </div>
+        <div class="card-body">
+          <span class="badge rounded-pill text-bg-warning ml-2 mr-2" *ngFor="let tecnologia of trabajoInfo.Tecnologias">{{ tecnologia }}</span>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#9eeaf9" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="#6edff6" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="#a6e9d5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#79dfc1" />
+        </g>
+      </svg>
+    </div>
+</div>
